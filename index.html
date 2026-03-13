@@ -6,26 +6,27 @@
     <title>Q4 Drill 1</title>
 </head>
 <body>
-    <h1>JavaScript Conditional Statements</h1>
+    <h1>Electricity consumption classifier</h1>
+    <div class="container"
     
 
-    <input type="text" class="form-control" id="Age" placeholder="type here...">
-    <button class="btn btn-info" onclick="checkAge()">Check</button>
+    <input type="text" class="form-control" id="Consumption" placeholder="type here...">
+    <button class="btn btn-info" onclick="checkElectricity()">Comsupmtion classifier</button>
 
     <script>
         function checkAge() {
-        var Age = document.getElementById("Age").value;
+        var Consumption = document.getElementById("Consumption").value;
 
-        if(isNaN(Age) || Age < 0){
-            alert("Please input a valid number.");
+        if(isNaN(Consumption) || Age < 0){
+            alert("Please input a non-negative number.");
         }
 
-        if (Age < 18){
+        if (Consumption < 18){
             alert("You are underage");
         }
 
-        else if(Age > 18){
-            alert("You are of legal age.");
+        else if(Consumption <= 100){
+            alert("Lifeline Consumer.");
         }
 
         else{
